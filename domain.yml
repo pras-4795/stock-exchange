@@ -1,0 +1,45 @@
+intents:
+- greet
+- goodbye
+- sell
+- trending
+- buy
+- predict
+entities:
+- stock_name
+slots:
+  stock_name:
+    type: unfeaturized
+templates:
+  utter_greet:
+  - text: Hey, how may i help you today?
+  utter_goodbye:
+  - text: Hope to see you again
+  utter_hold:
+  - text: It would be better to hold your stocks for now
+  utter_positive_trend:
+  - text: It is expected to raise in near future
+  utter_negative_trend:
+  - text: It is expected to fall in near future
+  utter_sell:
+  - text: It is preferd to sell your stocks
+  utter_buy:
+  - text: It is preferd to buy the stock {stock_name}
+  utter_top_5:
+  - text: Here are the top 5 stocks you can invest
+  utter_donot_buy:
+  - text: This dosen't seem to be the right time to buy the stock
+  utter_default:
+  - text: Sorry, I didn't understand that
+actions:
+- utter_greet
+- utter_hold
+- utter_positive_trend
+- utter_negative_trend
+- utter_sell
+- utter_buy
+- utter_top_5
+- utter_goodbye
+- utter_donot_buy
+- utter_default
+- sample_custom_action
